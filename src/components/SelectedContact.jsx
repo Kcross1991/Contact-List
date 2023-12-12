@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import {useEffect} from 'react'
 
-// eslint-disable-next-line react/prop-types
+
 function SelectedContact({selectedContactId,setSelectedContactId}){
     const [contact, setContact] = useState({})
     useEffect(()=>{
@@ -24,28 +24,25 @@ function SelectedContact({selectedContactId,setSelectedContactId}){
         };
     
               return ( 
-        <div>
-            <table>
-              <thead>
-                <tr>
-                  <th colSpan="3">Contact List</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Name</td>
-                  <td>Email</td>
-                  <td>Phone</td>
-                </tr>
-                <tr>
-                <td>{contact.name}</td>
-                <td>{contact.email}</td>
-                <td>{contact.phone}</td>
-                </tr>
-              </tbody>
+                <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colSpan = "3">Contact Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+       
+        <h3>Name:{contact.name}</h3> 
+        <div>Email:{contact.email}</div>
+        <div>Phone:{contact.phone}</div>
+        </tr>
+            </tbody>
             </table>
-            <button onClick={button}>Back</button>
-            </div>
+            <button onClick={button}>Go Back</button>
+        </div>
+       
         )
     
               }
