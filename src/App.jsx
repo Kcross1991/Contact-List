@@ -1,10 +1,12 @@
-import './App.css'
+import './App.css';
+import ContactList from './components/ContactList.jsx';
 
-function App() {
-
-
-  
-  
+export default  function App() {
+  return (
+    <>
+      <ContactList />
+    </>
+  );
 }
 
-export default App
+
